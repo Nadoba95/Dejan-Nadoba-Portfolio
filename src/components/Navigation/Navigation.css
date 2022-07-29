@@ -1,0 +1,51 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0px 4px 10px -3px rgba(0, 0, 0, 1);
+}
+
+.navigation > span > a {
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--green);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.7rem;
+  font-family: var(--roboto);
+  color: var(--secondaryColor);
+  font-size: 14px;
+}
+
+.list > li > a {
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--secondaryColor);
+}
+
+.list > li:hover > a {
+  color: var(--green);
+  border-bottom: 1px solid var(--green);
+}
+
+.list button {
+  background-color: transparent;
+  color: var(--green);
+  font-family: var(--roboto);
+  border: 1px solid var(--green);
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.list button:hover {
+  background-color: #12294b;
+}

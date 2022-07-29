@@ -1,0 +1,60 @@
+.skills {
+  padding: 6rem 2rem 0 2rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.skills > span:nth-child(1) {
+  font-size: 2rem;
+  color: var(--secondaryColor);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.skills > span:nth-child(1)::after {
+  content: "";
+  display: block;
+  width: 18rem;
+  height: 1px;
+  margin-left: 20px;
+  background-color: var(--primaryColor);
+  opacity: 0.5;
+}
+
+.skills > div:nth-child(2) {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  column-gap: 3rem;
+  row-gap: 1rem;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem;
+  border-radius: 10px;
+}
+
+.skill-item:hover {
+  background-color: #11243f;
+  color: var(--secondaryColor);
+}
+
+.skill-item:hover > img {
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 1.5s;
+}
+
+.skill-item:hover > img {
+  transform: rotate(360deg);
+}
+
+.skill-item > div:nth-child(2) {
+  font-family: var(--roboto);
+  font-size: 1.2rem;
+}
