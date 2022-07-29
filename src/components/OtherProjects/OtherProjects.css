@@ -1,0 +1,26 @@
+.other-projects {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 3rem;
+}
+
+.other-project__card > div:nth-child(1) {
+  display: flex;
+  justify-content: space-between;
+}
+
+.other-project {
+  background-color: #112240;
+  padding: 1rem;
+  position: relative;
+}
+
+.other-project > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.2;
+}

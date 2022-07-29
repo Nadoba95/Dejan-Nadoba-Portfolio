@@ -1,13 +1,15 @@
 import { motion, useAnimation } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
-import "./MyProjects.css";
+import OtherProjects from "../OtherProjects/OtherProjects";
+import "./FeaturedProjects.css";
 
-function MyProjects() {
-  const [ref1, inView1] = useInView({ threshold: 0.8 });
-  const [ref2, inView2] = useInView({ threshold: 0.8 });
-  const [ref3, inView3] = useInView({ threshold: 0.8 });
+function FeaturedProjects() {
+  const [showMore, setShowMore] = useState(false);
+  const [ref1, inView1] = useInView({ threshold: 0.5 });
+  const [ref2, inView2] = useInView({ threshold: 0.5 });
+  const [ref3, inView3] = useInView({ threshold: 0.5 });
   const animation1 = useAnimation();
   const animation2 = useAnimation();
   const animation3 = useAnimation();
@@ -40,9 +42,13 @@ function MyProjects() {
     });
   }
 
+  function showMoreHandler() {
+    setShowMore(true);
+  }
+
   return (
     <div className="projects" id="projects">
-      <span>My project's</span>
+      <span>My Projects</span>
 
       <div className="featured-projects">
         <motion.div
@@ -60,13 +66,13 @@ function MyProjects() {
           </a>
           <span className="project-details1 details">
             <span>Featured Project</span>
-            <span>REST Countries API</span>
-            <div>
+            <span className="project__name">REST Countries API</span>
+            <div className="project__desc">
               This is my first REST project and i learned a lot about react
               building it. Used react custom hooks, react router for pagination,
               useContext, etc.
             </div>
-            <ul>
+            <ul className="project__tech-list">
               <li>React</li>
               <li>React-Router</li>
               <li>API</li>
@@ -100,12 +106,12 @@ function MyProjects() {
         >
           <span className="project-details2 details">
             <span>Featured Project</span>
-            <span>Tic Tac Toe Game</span>
-            <div>
+            <span className="project__name">Tic Tac Toe App</span>
+            <div className="project__desc">
               Built a tic tac toe game where people can play against each other
               or against CPU. Used html, css and JavaScript.
             </div>
-            <ul>
+            <ul className="project__tech-list">
               <li>HTML</li>
               <li>CSS</li>
               <li>JavaScript</li>
@@ -153,13 +159,13 @@ function MyProjects() {
           </a>
           <span className="project-details3 details">
             <span>Featured Project</span>
-            <span>Fit Club Website</span>
-            <div>
+            <span className="project__name">Fit Club Website</span>
+            <div className="project__desc">
               On this project i used first time framer motion for animations in
               react. This project was for me practicing all round (react, css,
               js, animations).
             </div>
-            <ul>
+            <ul className="project__tech-list">
               <li>React</li>
               <li>Framer-Motion</li>
             </ul>
@@ -167,6 +173,7 @@ function MyProjects() {
               <a
                 href="https://github.com/Nadoba95/Fit-Club-Website"
                 target="_blank"
+                title="Github"
                 rel="noreferrer"
               >
                 <i className="fa-brands fa-github"></i>
@@ -183,8 +190,17 @@ function MyProjects() {
           </span>
         </motion.div>
       </div>
+
+      {!showMore && (
+        <div className="show-hide" onClick={showMoreHandler}>
+          Show More
+        </div>
+      )}
+      {showMore && (
+        <OtherProjects showMore={showMore} setShowMore={setShowMore} />
+      )}
     </div>
   );
 }
 
-export default MyProjects;
+export default FeaturedProjects;

@@ -2,11 +2,12 @@ import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import { skillsData } from "../../data/skillsData";
+
 import "./Skills.css";
 
 function Skills() {
   const animation = useAnimation();
-  const [ref, inView] = useInView();
+  const [ref, inView] = useInView({ threshold: 0.5 });
 
   const transition = { type: "spring", duration: 1 };
 
@@ -23,11 +24,10 @@ function Skills() {
   return (
     <div className="skills" id="skills">
       <span>Skills</span>
-      <div>
+      <div ref={ref}>
         {skillsData.map((skill) => {
           return (
             <motion.div
-              ref={ref}
               initial={{ y: 100, opacity: 0 }}
               animate={animation}
               key={skill.name}
