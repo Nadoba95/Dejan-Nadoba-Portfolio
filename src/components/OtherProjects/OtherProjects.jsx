@@ -1,8 +1,11 @@
+import { motion } from "framer-motion";
 import { otherProjectsData } from "../../data/otherProjectsData";
 
 import "./OtherProjects.css";
 
 function OtherProjects({ showMore, setShowMore }) {
+  const transition = { type: "spring", duration: 1 };
+
   function showLessHandler() {
     setShowMore(false);
   }
@@ -11,7 +14,12 @@ function OtherProjects({ showMore, setShowMore }) {
     <>
       {showMore && (
         <>
-          <div className="other-projects">
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={transition}
+            className="other-projects"
+          >
             {otherProjectsData.map((project, i) => (
               <div key={i} className="other-project">
                 <div className="other-project__card">
@@ -46,7 +54,7 @@ function OtherProjects({ showMore, setShowMore }) {
                 {project.image}
               </div>
             ))}
-          </div>
+          </motion.div>
 
           <div className="show-hide" onClick={showLessHandler}>
             Show Less

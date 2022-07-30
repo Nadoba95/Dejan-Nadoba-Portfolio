@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import CV from "../../assets/pdf/Dejan Nadoba CV.pdf";
 
 import "./Navigation.css";
 
@@ -13,7 +14,7 @@ function Navigation() {
       className="navigation"
     >
       <span>
-        <a href="">DN</a>
+        <a href=".">DN</a>
       </span>
       <ul className="list">
         <li>
@@ -31,7 +32,9 @@ function Navigation() {
         <li>
           <a href="#contact">Contact</a>
         </li>
-        <button>Resume</button>
+        <a className="resume-link" href={CV} download="Dejan Nadoba CV">
+          Resume
+        </a>
       </ul>
     </motion.nav>
   );

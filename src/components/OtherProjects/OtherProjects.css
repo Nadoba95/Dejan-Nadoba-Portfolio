@@ -4,15 +4,25 @@
   gap: 3rem;
 }
 
+.other-project {
+  background-color: #112240;
+  padding: 1rem;
+  position: relative;
+}
+
+.other-project__card {
+  position: relative;
+  z-index: 2;
+}
+
 .other-project__card > div:nth-child(1) {
   display: flex;
   justify-content: space-between;
 }
 
-.other-project {
-  background-color: #112240;
-  padding: 1rem;
-  position: relative;
+.other-project .project__desc {
+  background-color: transparent;
+  color: #b2b7c7;
 }
 
 .other-project > img {

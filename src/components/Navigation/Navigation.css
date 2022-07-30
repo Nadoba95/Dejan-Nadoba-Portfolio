@@ -35,17 +35,18 @@
   border-bottom: 1px solid var(--green);
 }
 
-.list button {
+.resume-link {
   background-color: transparent;
   color: var(--green);
   font-family: var(--roboto);
   border: 1px solid var(--green);
   border-radius: 5px;
+  text-decoration: none;
   padding: 0.5rem 1rem;
   cursor: pointer;
   transition: 0.3s;
 }
 
-.list button:hover {
+.resume-link:hover {
   background-color: #12294b;
 }

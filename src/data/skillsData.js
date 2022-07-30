@@ -1,11 +1,11 @@
-import Html from "../assets/html5.svg";
-import Css from "../assets/css3.svg";
-import JavaScript from "../assets/javascript.svg";
-import Sass from "../assets/sass.svg";
-import Bootstrap from "../assets/bootstrap.svg";
-import React from "../assets/react.svg";
-import Redux from "../assets/redux.svg";
-import Git from "../assets/git.svg";
+import Html from "../assets/images/html5.svg";
+import Css from "../assets/images/css3.svg";
+import JavaScript from "../assets/images/javascript.svg";
+import Sass from "../assets/images/sass.svg";
+import Bootstrap from "../assets/images/bootstrap.svg";
+import React from "../assets/images/react.svg";
+import Redux from "../assets/images/redux.svg";
+import Git from "../assets/images/git.svg";
 
 export const skillsData = [
   {

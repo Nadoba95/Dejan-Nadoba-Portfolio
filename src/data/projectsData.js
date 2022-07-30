@@ -1,6 +1,6 @@
-import Countries from "../assets/Countries.jpg";
-import TicTac from "../assets/iks-oks.jpg";
-import FitClub from "../assets/fit-club.jpg";
+import Countries from "../assets/images/Countries.jpg";
+import TicTac from "../assets/images/iks-oks.jpg";
+import FitClub from "../assets/images/fit-club.jpg";
 
 export const projectsData = [
   {

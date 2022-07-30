@@ -1,8 +1,8 @@
-import Todo from "../assets/Todo.png";
-import TipCalculator from "../assets/tip-calculator.png";
-import CountdownTimer from "../assets/countdown-timer.png";
-import Restaurant from "../assets/restaurant.png";
-import TimeDashboard from "../assets/time-tracking-dashboard.png";
+import Todo from "../assets/images/Todo.png";
+import TipCalculator from "../assets/images/tip-calculator.png";
+import CountdownTimer from "../assets/images/countdown-timer.png";
+import Restaurant from "../assets/images/restaurant.png";
+import TimeDashboard from "../assets/images/time-tracking-dashboard.png";
 
 export const otherProjectsData = [
   {
