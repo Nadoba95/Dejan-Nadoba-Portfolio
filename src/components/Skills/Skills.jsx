@@ -23,7 +23,7 @@ function Skills() {
 
   return (
     <div className="skills" id="skills">
-      <span>Skills</span>
+      <div className="title">Skills</div>
       <div ref={ref}>
         {skillsData.map((skill) => {
           return (

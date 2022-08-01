@@ -21,8 +21,8 @@ export const otherProjectsData = [
     techs: ["HTML", "CSS", "JavaScript"],
     description:
       "This is my first REST project and i learned a lot about react building it. Used react custom hooks, react router for pagination, useContext, etc.",
-    github: "https://nadoba95.github.io/Tip-calculator-app/",
-    liveSite: "https://github.com/Nadoba95/Tip-calculator-app",
+    github: "https://github.com/Nadoba95/Tip-calculator-app",
+    liveSite: "https://nadoba95.github.io/Tip-calculator-app/",
   },
 
   {

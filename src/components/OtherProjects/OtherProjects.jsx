@@ -24,7 +24,14 @@ function OtherProjects({ showMore, setShowMore }) {
               <div key={i} className="other-project">
                 <div className="other-project__card">
                   <div>
-                    <div className="project__name">{project.name}</div>
+                    <a
+                      className="project__name"
+                      href={project.liveSite}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {project.name}
+                    </a>
                     <div className="project__links">
                       <a
                         href={project.github}

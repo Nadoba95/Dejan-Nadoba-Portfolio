@@ -7,32 +7,32 @@ import "./FeaturedProjects.css";
 
 function FeaturedProjects() {
   const [showMore, setShowMore] = useState(false);
-  const [ref1, inView1] = useInView({ threshold: 0.5 });
-  const [ref2, inView2] = useInView({ threshold: 0.5 });
-  const [ref3, inView3] = useInView({ threshold: 0.5 });
-  const animation1 = useAnimation();
-  const animation2 = useAnimation();
-  const animation3 = useAnimation();
+  const [project1Ref, project1View] = useInView({ threshold: 0.5 });
+  const [project2Ref, project2View] = useInView({ threshold: 0.5 });
+  const [project3Ref, project3View] = useInView({ threshold: 0.5 });
+  const project1Animation = useAnimation();
+  const project2Animation = useAnimation();
+  const project3Animation = useAnimation();
 
   const transition = { type: "spring", duration: 2.5, bounce: 0.5 };
 
   useEffect(() => {
-    if (inView1) {
-      animate(animation1);
+    if (project1View) {
+      animate(project1Animation);
     }
-  });
+  }, [project1View, project1Animation]);
 
   useEffect(() => {
-    if (inView2) {
-      animate(animation2);
+    if (project2View) {
+      animate(project2Animation);
     }
-  });
+  }, [project2View, project2Animation]);
 
   useEffect(() => {
-    if (inView3) {
-      animate(animation3);
+    if (project3View) {
+      animate(project3Animation);
     }
-  });
+  }, [project3View, project3Animation]);
 
   function animate(animation) {
     animation.start({
@@ -48,13 +48,13 @@ function FeaturedProjects() {
 
   return (
     <div className="projects" id="projects">
-      <span>My Projects</span>
+      <div className="title">My Projects</div>
 
       <div className="featured-projects">
         <motion.div
-          ref={ref1}
+          ref={project1Ref}
           initial={{ x: 200, opacity: 0 }}
-          animate={animation1}
+          animate={project1Animation}
           className="project"
         >
           <a
@@ -99,9 +99,9 @@ function FeaturedProjects() {
         </motion.div>
 
         <motion.div
-          ref={ref2}
+          ref={project2Ref}
           initial={{ x: -200, opacity: 0 }}
-          animate={animation2}
+          animate={project2Animation}
           className="project"
         >
           <span className="project-details2 details">
@@ -145,9 +145,9 @@ function FeaturedProjects() {
         </motion.div>
 
         <motion.div
-          ref={ref3}
+          ref={project3Ref}
           initial={{ x: 200, opacity: 0 }}
-          animate={animation3}
+          animate={project3Animation}
           className="project"
         >
           <a

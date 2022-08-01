@@ -43,7 +43,7 @@ function Education() {
       className="education"
       id="education"
     >
-      <span>Education</span>
+      <div className="title">Education</div>
 
       <div className="education__list">
         <div className="education__items">

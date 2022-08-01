@@ -7,24 +7,6 @@
   max-width: 1100px;
 }
 
-.projects > span {
-  font-size: 2rem;
-  color: var(--secondaryColor);
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-}
-
-.projects > span::after {
-  content: "";
-  display: block;
-  width: 18rem;
-  height: 1px;
-  margin-left: 20px;
-  background-color: var(--primaryColor);
-  opacity: 0.5;
-}
-
 .featured-projects {
   display: flex;
   flex-direction: column;

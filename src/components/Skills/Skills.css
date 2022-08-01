@@ -6,24 +6,6 @@
   gap: 2.5rem;
 }
 
-.skills > span:nth-child(1) {
-  font-size: 2rem;
-  color: var(--secondaryColor);
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-}
-
-.skills > span:nth-child(1)::after {
-  content: "";
-  display: block;
-  width: 18rem;
-  height: 1px;
-  margin-left: 20px;
-  background-color: var(--primaryColor);
-  opacity: 0.5;
-}
-
 .skills > div:nth-child(2) {
   display: grid;
   grid-template-columns: repeat(4, auto);
