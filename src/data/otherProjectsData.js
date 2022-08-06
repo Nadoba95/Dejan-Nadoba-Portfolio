@@ -10,7 +10,7 @@ export const otherProjectsData = [
     image: <img src={Todo} alt="Todo" />,
     techs: ["HTML", "CSS", "JavaScript"],
     description:
-      "This is my first REST project and i learned a lot about react building it. Used react custom hooks, react router for pagination, useContext, etc.",
+      "Todo app where user can add tasks, check/uncheck and delete them. Tasks can be reordered with drag and drop and they are saved in local storage. ",
     github: "https://github.com/Nadoba95/Todo-app",
     liveSite: "https://nadoba95.github.io/Todo-app/",
   },
@@ -20,7 +20,7 @@ export const otherProjectsData = [
     image: <img src={TipCalculator} alt="TipCalculator" />,
     techs: ["HTML", "CSS", "JavaScript"],
     description:
-      "This is my first REST project and i learned a lot about react building it. Used react custom hooks, react router for pagination, useContext, etc.",
+      "User can calculate tips for certain amount of people for each person separately and for all.",
     github: "https://github.com/Nadoba95/Tip-calculator-app",
     liveSite: "https://nadoba95.github.io/Tip-calculator-app/",
   },
@@ -30,7 +30,7 @@ export const otherProjectsData = [
     image: <img src={CountdownTimer} alt="CountdownTimer" />,
     techs: ["React"],
     description:
-      "This is my first REST project and i learned a lot about react building it. Used react custom hooks, react router for pagination, useContext, etc.",
+      "My first simple react app, countdown timer for work season and for rest season. This kind of app is for training system usually.  ",
     github: "https://github.com/Nadoba95/React-Countdown-timer",
     liveSite: "https://countdown-timer-nadoba95.netlify.app/",
   },
@@ -40,7 +40,7 @@ export const otherProjectsData = [
     image: <img src={Restaurant} alt="Restaurant" />,
     techs: ["HTML", "CSS", "JavaScript"],
     description:
-      "This is my first REST project and i learned a lot about react building it. Used react custom hooks, react router for pagination, useContext, etc.",
+      "Nice looking static restaurant site where i practiced css on beginning with navbar.",
     github: "https://github.com/Nadoba95/Restaurant",
     liveSite: "https://nadoba95.github.io/Restaurant/",
   },
@@ -50,7 +50,7 @@ export const otherProjectsData = [
     image: <img src={TimeDashboard} alt="TimeDashboard" />,
     techs: ["HTML", "CSS", "SCSS"],
     description:
-      "This is my first REST project and i learned a lot about react building it. Used react custom hooks, react router for pagination, useContext, etc.",
+      "Dashboard where i'm getting data from json file and i used and practiced SCSS in this app for the first time ",
     github: "https://github.com/Nadoba95/Time-tracking-dashboard",
     liveSite: "https://time-tracking-dashboard-nadoba95.netlify.app/",
   },

@@ -1,17 +1,29 @@
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+
 import CV from "../../assets/pdf/Dejan Nadoba CV.pdf";
 
 import "./Navigation.css";
 
-function Navigation() {
+function Navigation({ aboutInView }) {
+  const [navClasses, setNavClasses] = useState("navigation");
   const transition = { type: "spring", duration: 1 };
+
+  useEffect(() => {
+    if (aboutInView) {
+      setNavClasses("navigation");
+    } else {
+      setNavClasses("navigation fixed");
+    }
+    console.log(aboutInView);
+  }, [aboutInView]);
 
   return (
     <motion.nav
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={transition}
-      className="navigation"
+      className={navClasses}
     >
       <span>
         <a href=".">DN</a>

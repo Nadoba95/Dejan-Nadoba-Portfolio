@@ -31,51 +31,58 @@ function Contact() {
   return (
     <div className="contact" id="contact">
       <div className="title">Contact</div>
-      <form onSubmit={submitHandler} action={email} method="post">
-        <div className="form-control">
-          <label htmlFor="email">Your Email</label>
-          <input type="email" name="email" id="email" />
+      <div>
+        <div className="contact__info">
+          <div>Email: dejannadobaa@gmail</div>
+          <div>Mobile: +381614413166</div>
+          <motion.div
+            initial={{ x: 0, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={transition}
+            className="social-links-container"
+          >
+            <ul className="social-links">
+              {linksData.map((data, i) => {
+                return (
+                  <li key={i}>
+                    <a
+                      href={data.link}
+                      title={data.name}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {data.icon}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </motion.div>
         </div>
-        <div className="form-control">
-          <label htmlFor="title">Title</label>
-          <input type="text" name="title" id="title" />
-        </div>
-        <div className="form-control">
-          <label htmlFor="message">Message</label>
-          <textarea
-            type="text"
-            name="message"
-            id="message"
-            rows={10}
-            maxLength="350"
-          />
-        </div>
-        <button type="submit">Send</button>
-      </form>
-
-      <motion.div
-        initial={{ x: 0, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={transition}
-        className="social-links-container"
-      >
-        <ul className="social-links">
-          {linksData.map((data, i) => {
-            return (
-              <li key={i}>
-                <a
-                  href={data.link}
-                  title={data.name}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {data.icon}
-                </a>
-              </li>
-            );
-          })}
-        </ul>
-      </motion.div>
+        <form onSubmit={submitHandler} action={email} method="post">
+          <div className="form-control">
+            <label htmlFor="email">Your Email</label>
+            <input type="email" name="email" id="email" />
+          </div>
+          <div className="form-control">
+            <label htmlFor="title">Title</label>
+            <input type="text" name="title" id="title" />
+          </div>
+          <div className="form-control">
+            <label htmlFor="message">Message</label>
+            <textarea
+              type="text"
+              name="message"
+              id="message"
+              rows={10}
+              maxLength="350"
+            />
+          </div>
+          <button className="form-btn" type="submit">
+            Send
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
