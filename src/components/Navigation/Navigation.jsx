@@ -15,7 +15,6 @@ function Navigation({ aboutInView }) {
     } else {
       setNavClasses("navigation fixed");
     }
-    console.log(aboutInView);
   }, [aboutInView]);
 
   return (

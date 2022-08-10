@@ -25,7 +25,7 @@
 .contact form {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 1.5rem;
 }
 
 .form-control {
@@ -44,13 +44,17 @@
 .form-control > textarea {
   width: 70%;
   outline: none;
-  border: none;
   border-radius: 2px;
   background-color: var(--primaryColor);
   padding: 0.2rem 0.5rem;
   font-size: 17px;
   color: #112240;
-  border: 2px solid transparent;
+  border: 1px solid transparent;
+}
+
+.form-control > input.error,
+.form-control > textarea.error {
+  border: 1px solid var(--green);
 }
 
 .form-control > textarea {
@@ -106,4 +110,10 @@
 .social-links i:hover {
   color: var(--green);
   transform: translateY(-3px);
+}
+
+.error-message {
+  color: var(--green);
+  font-family: var(--roboto);
+  text-align: end;
 }
