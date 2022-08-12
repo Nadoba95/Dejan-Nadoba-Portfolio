@@ -73,8 +73,8 @@
 .about__right > div > div:nth-child(2) {
   position: absolute;
   border: 2px solid var(--green);
-  width: 15.75rem;
-  height: 23.25rem;
+  width: 100%;
+  height: 100%;
   border-radius: 10px;
   transition: 0.3s;
 }
@@ -89,4 +89,29 @@
 
 .about__right > div:hover > div:nth-child(2) {
   transform: translate(-0.3rem, 0.3rem);
+}
+
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+  }
+
+  .about__left > span:nth-child(2),
+  .about__left > span:nth-child(3) {
+    font-size: 3rem;
+  }
+
+  .about__right {
+    justify-content: center;
+  }
+
+  .about__right > div {
+    width: 13.75rem;
+    height: 20.25rem;
+  }
+
+  .face-image,
+  .about__right > div > div:nth-child(2) {
+    transform: translateX(1.2rem);
+  }
 }

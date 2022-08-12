@@ -182,3 +182,71 @@
 .show-hide:hover {
   background-color: #1b2d4d;
 }
+
+@media (max-width: 768px) {
+  .project {
+    position: relative;
+  }
+
+  .project > a {
+    width: 100%;
+  }
+
+  .project > .details {
+    width: 100%;
+    position: absolute;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0 1rem;
+  }
+
+  .project__desc {
+    background-color: transparent;
+    padding: 1rem 0;
+  }
+
+  .project .img {
+    border-bottom: none;
+    transition: none;
+    cursor: pointer;
+  }
+
+  .project-img1,
+  .project-img3,
+  .project-img1:hover,
+  .project-img3:hover {
+    border-right: none;
+  }
+
+  .project-img2,
+  .project-img2:hover {
+    border-left: none;
+  }
+
+  .project-img1,
+  .project-img1:hover {
+    background-image: linear-gradient(
+        rgba(29, 72, 83, 0.9),
+        rgba(29, 72, 83, 0.9)
+      ),
+      url(../../assets/images/Countries.jpg);
+  }
+
+  .project-img2,
+  .project-img2:hover {
+    background-image: linear-gradient(
+        rgba(29, 72, 83, 0.9),
+        rgba(29, 72, 83, 0.9)
+      ),
+      url(../../assets/images/iks-oks.jpg);
+  }
+
+  .project-img3,
+  .project-img3:hover {
+    background-image: linear-gradient(
+        rgba(29, 72, 83, 0.9),
+        rgba(29, 72, 83, 0.9)
+      ),
+      url(../../assets/images/fit-club.jpg);
+  }
+}

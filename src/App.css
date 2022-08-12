@@ -50,3 +50,13 @@ body {
   background-color: var(--primaryColor);
   opacity: 0.5;
 }
+
+@media (max-width: 768px) {
+  .App {
+    gap: 10rem;
+  }
+
+  .title {
+    justify-content: center;
+  }
+}

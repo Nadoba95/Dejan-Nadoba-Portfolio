@@ -69,3 +69,14 @@
   opacity: 0.2;
   border-radius: inherit;
 }
+
+@media (max-width: 768px) {
+  .other-projects {
+    grid-template-columns: repeat(2, auto);
+    gap: 2rem;
+  }
+
+  .show-hide {
+    padding: 1rem;
+  }
+}

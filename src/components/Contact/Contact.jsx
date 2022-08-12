@@ -6,6 +6,7 @@ import useInput from "../../hooks/use-input";
 import "./Contact.css";
 
 const email = "https://formsubmit.co/ajax/dejannadobaa@gmail.com";
+const isNotEmpty = (value) => value.trim() !== "";
 
 function Contact() {
   const [messageSuccessfullySent, setMessageSuccessfullySent] = useState(false);
@@ -18,10 +19,7 @@ function Contact() {
     valueChangeHandler: emailChangeHandler,
     reset: resetEmailInput,
   } = useInput(
-    (value) =>
-      value.trim() !== "" &&
-      value.trim().includes("@") &&
-      value.trim().includes(".com")
+    (value) => value.trim().includes("@") && value.trim().includes(".com")
   );
 
   const {
@@ -31,7 +29,7 @@ function Contact() {
     setEnteredValueIsValid: setTitleIsValid,
     valueChangeHandler: titleChangeHandler,
     reset: resetTitleInput,
-  } = useInput((value) => value.trim() !== "");
+  } = useInput(isNotEmpty);
 
   const {
     value: enteredMessage,
@@ -40,7 +38,7 @@ function Contact() {
     setEnteredValueIsValid: setMessageIsValid,
     valueChangeHandler: messageChangeHandler,
     reset: resetMessageInput,
-  } = useInput((value) => value.trim() !== "");
+  } = useInput(isNotEmpty);
 
   const transition = { type: "spring", duration: 1, delay: 0.5 };
 

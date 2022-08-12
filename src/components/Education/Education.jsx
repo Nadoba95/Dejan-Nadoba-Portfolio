@@ -10,7 +10,7 @@ function Education() {
   const animation = useAnimation();
   const [ref, inView] = useInView({ threshold: 0.8 });
 
-  const transition = { type: "spring", duration: 1 };
+  const transition = { type: "spring", duration: 1.2 };
 
   useEffect(() => {
     if (inView) {
@@ -38,7 +38,7 @@ function Education() {
   return (
     <motion.div
       ref={ref}
-      initial={{ x: -200, opacity: 0 }}
+      initial={{ x: -100, opacity: 0 }}
       animate={animation}
       className="education"
       id="education"
