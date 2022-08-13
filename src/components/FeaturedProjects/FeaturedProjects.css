@@ -188,6 +188,10 @@
     position: relative;
   }
 
+  .project > .details {
+    gap: 1rem;
+  }
+
   .project > a {
     width: 100%;
   }
@@ -248,5 +252,45 @@
         rgba(29, 72, 83, 0.9)
       ),
       url(../../assets/images/fit-club.jpg);
+  }
+}
+
+@media (max-width: 575px) {
+  .featured-projects {
+    gap: 3rem;
+  }
+
+  .project > .details {
+    gap: 0.3rem;
+  }
+
+  .project .details > span:nth-child(1) {
+    font-size: 12px;
+  }
+
+  .project__name {
+    font-size: 15px;
+  }
+
+  .project__desc {
+    padding: 0.3rem 0;
+    font-size: 11px;
+  }
+
+  .project__tech-list > li {
+    font-size: 10px;
+  }
+
+  .project__links > a > i {
+    font-size: 12px;
+  }
+
+  .project .img {
+    height: 160px;
+  }
+
+  .show-hide {
+    padding: 0.7rem;
+    font-size: 14px;
   }
 }

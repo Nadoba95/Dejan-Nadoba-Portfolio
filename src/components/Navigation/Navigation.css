@@ -60,3 +60,37 @@
 .resume-link:hover {
   background-color: #12294b;
 }
+
+@media (max-width: 768px) {
+  nav > i {
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  .list {
+    position: absolute;
+    right: 2rem;
+    top: 4rem;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1rem;
+    z-index: 99;
+  }
+}
+
+@media (max-width: 575px) {
+  .list {
+    gap: 0.5rem;
+  }
+
+  .list a {
+    font-size: 12px;
+  }
+
+  .resume-link {
+    padding: 0.2rem 0.3rem;
+    font-size: 12px;
+    position: absolute;
+    right: 4rem;
+  }
+}

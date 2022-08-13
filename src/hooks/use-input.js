@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 function useInput(validateValue) {
   const [enteredValue, setEnteredValue] = useState("");
   const [enteredValueIsValid, setEnteredValueIsValid] = useState(true);
+  const valueRef = useRef();
 
   const checkValueIsValid = validateValue(enteredValue);
 
@@ -21,6 +22,7 @@ function useInput(validateValue) {
     setEnteredValueIsValid,
     valueChangeHandler,
     reset,
+    valueRef,
   };
 }
 

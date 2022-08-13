@@ -103,6 +103,7 @@
 
   .about__right {
     justify-content: center;
+    transform: translateX(1.2rem);
   }
 
   .about__right > div {
@@ -110,8 +111,35 @@
     height: 20.25rem;
   }
 
-  .face-image,
-  .about__right > div > div:nth-child(2) {
-    transform: translateX(1.2rem);
+  .about__right > div:hover > div:nth-child(2) {
+    transform: translate(-0.15rem, 0.15rem);
+  }
+}
+
+@media (max-width: 575px) {
+  .navigation > span > a {
+    font-size: 1.7rem;
+  }
+
+  .about {
+    margin: 6rem auto 0 auto;
+  }
+
+  .about__left > span:nth-child(2),
+  .about__left > span:nth-child(3) {
+    font-size: 2rem;
+  }
+
+  .about__left > span:nth-child(4) {
+    font-size: 14px;
+  }
+
+  .about__right > div {
+    width: 10.75rem;
+    height: 16.25rem;
+  }
+
+  .about__right > div:hover > div:nth-child(2) {
+    transform: translate(-0.15rem, 0.15rem);
   }
 }

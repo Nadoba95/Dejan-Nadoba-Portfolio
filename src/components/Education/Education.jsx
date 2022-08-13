@@ -7,10 +7,11 @@ import "./Education.css";
 
 function Education() {
   const [selector, setSelector] = useState(1);
-  const animation = useAnimation();
   const [ref, inView] = useInView({ threshold: 0.8 });
+  const animation = useAnimation();
 
   const transition = { type: "spring", duration: 1.2 };
+  const mobile = window.innerWidth <= 575;
 
   useEffect(() => {
     if (inView) {
@@ -35,17 +36,22 @@ function Education() {
     setSelector(id);
   }
 
+  const educationListClasses =
+    window.innerWidth <= "768px"
+      ? "education__list scrollbar"
+      : "education__list";
+
   return (
     <motion.div
       ref={ref}
-      initial={{ x: -100, opacity: 0 }}
+      initial={mobile ? { x: 0, opacity: 1 } : { x: -100, opacity: 0 }}
       animate={animation}
       className="education"
       id="education"
     >
       <div className="title">Education</div>
 
-      <div className="education__list">
+      <div className={educationListClasses}>
         <div className="education__items">
           {educationData.map((education) => (
             <div
@@ -57,8 +63,9 @@ function Education() {
             </div>
           ))}
         </div>
+
         <motion.div
-          initial={{ x: 100, opacity: 0 }}
+          initial={mobile ? { x: 0, opacity: 0 } : { x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={transition}
           className="item-details"

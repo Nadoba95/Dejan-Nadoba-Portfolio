@@ -1,5 +1,5 @@
 .education {
-  max-width: 47rem;
+  width: 47rem;
   padding: 7rem 1rem 0 1rem;
   margin: 0 auto;
 }
@@ -8,6 +8,7 @@
   display: flex;
   gap: 5rem;
   padding: 3rem 0;
+  position: relative;
 }
 
 .education__items,
@@ -47,10 +48,15 @@
 }
 
 @media (max-width: 768px) {
+  .education {
+    width: auto;
+  }
+
   .education__list {
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 1.5rem;
   }
+
   .education__items {
     flex-direction: row;
     font-size: 0.7rem;
@@ -65,5 +71,27 @@
   .education__item:hover {
     border-left: none;
     border-bottom: 2px solid var(--green);
+  }
+}
+
+@media (max-width: 575px) {
+  .education__items {
+    overflow-x: scroll;
+    max-width: 450px;
+  }
+
+  .education__items::-webkit-scrollbar {
+    height: 12px;
+  }
+
+  .education__items::-webkit-scrollbar-track {
+    background-color: #112441;
+    border-radius: 100vh;
+  }
+
+  .education__items::-webkit-scrollbar-thumb {
+    background-color: var(--primaryColor);
+    border-radius: 100vh;
+    border: 2px solid #112441;
   }
 }

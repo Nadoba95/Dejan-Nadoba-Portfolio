@@ -29,6 +29,7 @@
 .other-project__card > div:nth-child(1) {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .other-project .project__name {
@@ -70,13 +71,36 @@
   border-radius: inherit;
 }
 
+@media (max-width: 980px) {
+  .other-projects {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+@media (max-width: 768px) {
+  .other-projects {
+    gap: 2rem;
+  }
+}
+
 @media (max-width: 768px) {
   .other-projects {
     grid-template-columns: repeat(2, auto);
-    gap: 2rem;
   }
 
-  .show-hide {
-    padding: 1rem;
+  .other-project .project__name {
+    font-size: 12px;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 575px) {
+  .other-projects {
+    grid-template-columns: repeat(1, auto);
+  }
+
+  .other-project {
+    width: 300px;
+    margin: 0 auto;
   }
 }

@@ -15,6 +15,7 @@ function FeaturedProjects() {
   const project3Animation = useAnimation();
 
   const transition = { type: "spring", duration: 2.5, bounce: 0.5 };
+  const mobile = window.innerWidth <= 575;
 
   useEffect(() => {
     if (project1View) {
@@ -53,7 +54,7 @@ function FeaturedProjects() {
       <div className="featured-projects">
         <motion.div
           ref={project1Ref}
-          initial={{ x: 200, opacity: 0 }}
+          initial={mobile ? { x: 0, opacity: 0 } : { x: 200, opacity: 0 }}
           animate={project1Animation}
           className="project"
         >
@@ -100,7 +101,7 @@ function FeaturedProjects() {
 
         <motion.div
           ref={project2Ref}
-          initial={{ x: -200, opacity: 0 }}
+          initial={mobile ? { x: 0, opacity: 0 } : { x: -200, opacity: 0 }}
           animate={project2Animation}
           className="project"
         >
@@ -146,7 +147,7 @@ function FeaturedProjects() {
 
         <motion.div
           ref={project3Ref}
-          initial={{ x: 200, opacity: 0 }}
+          initial={mobile ? { x: 0, opacity: 0 } : { x: 200, opacity: 0 }}
           animate={project3Animation}
           className="project"
         >

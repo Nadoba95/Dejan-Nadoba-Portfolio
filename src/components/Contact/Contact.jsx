@@ -11,6 +11,8 @@ const isNotEmpty = (value) => value.trim() !== "";
 function Contact() {
   const [messageSuccessfullySent, setMessageSuccessfullySent] = useState(false);
 
+  const tablet = window.innerWidth <= 768;
+
   const {
     value: enteredEmail,
     valueIsValid: emailIsValid,
@@ -18,6 +20,7 @@ function Contact() {
     setEnteredValueIsValid: setEmailIsValid,
     valueChangeHandler: emailChangeHandler,
     reset: resetEmailInput,
+    valueRef: emailRef,
   } = useInput(
     (value) => value.trim().includes("@") && value.trim().includes(".com")
   );
@@ -29,6 +32,7 @@ function Contact() {
     setEnteredValueIsValid: setTitleIsValid,
     valueChangeHandler: titleChangeHandler,
     reset: resetTitleInput,
+    valueRef: titleRef,
   } = useInput(isNotEmpty);
 
   const {
@@ -38,6 +42,7 @@ function Contact() {
     setEnteredValueIsValid: setMessageIsValid,
     valueChangeHandler: messageChangeHandler,
     reset: resetMessageInput,
+    valueRef: messageRef,
   } = useInput(isNotEmpty);
 
   const transition = { type: "spring", duration: 1, delay: 0.5 };
@@ -49,16 +54,19 @@ function Contact() {
 
     if (!checkEmailIsValid) {
       setEmailIsValid(false);
+      emailRef.current.focus();
       return;
     }
     if (!checkTitleIsValid) {
       setTitleIsValid(false);
       setEmailIsValid(true);
+      titleRef.current.focus();
       return;
     }
     if (!checkMessageIsValid) {
       setMessageIsValid(false);
       setTitleIsValid(true);
+      messageRef.current.focus();
       return;
     }
 
@@ -99,34 +107,37 @@ function Contact() {
         <div className="contact__info">
           <div>Email: dejannadobaa@gmail.com</div>
           <div>Mobile: +381614413166</div>
-          <motion.div
-            initial={{ x: 0, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={transition}
-            className="social-links-container"
-          >
-            <ul className="social-links">
-              {linksData.map((data, i) => {
-                return (
-                  <li key={i}>
-                    <a
-                      href={data.link}
-                      title={data.name}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {data.icon}
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
-          </motion.div>
+          {!tablet && (
+            <motion.div
+              initial={{ x: 0, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={transition}
+              className="social-links-container"
+            >
+              <ul className="social-links">
+                {linksData.map((data, i) => {
+                  return (
+                    <li key={i}>
+                      <a
+                        href={data.link}
+                        title={data.name}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {data.icon}
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
+            </motion.div>
+          )}
         </div>
         <form onSubmit={submitHandler} action={email} method="post">
           <div className="form-control">
             <label htmlFor="email">Your Email</label>
             <input
+              ref={emailRef}
               type="email"
               name="email"
               className={emailInputClasses}
@@ -141,6 +152,7 @@ function Contact() {
           <div className="form-control">
             <label htmlFor="title">Title</label>
             <input
+              ref={titleRef}
               type="text"
               name="title"
               className={titleInputClasses}
@@ -155,6 +167,7 @@ function Contact() {
           <div className="form-control">
             <label htmlFor="message">Message</label>
             <textarea
+              ref={messageRef}
               type="text"
               name="message"
               className={messageInputClasses}
@@ -177,6 +190,27 @@ function Contact() {
             Send
           </button>
         </form>
+
+        {tablet && (
+          <div className="social-links-container">
+            <ul className="social-links">
+              {linksData.map((data, i) => {
+                return (
+                  <li key={i}>
+                    <a
+                      href={data.link}
+                      title={data.name}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {data.icon}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        )}
       </div>
     </div>
   );

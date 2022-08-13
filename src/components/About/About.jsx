@@ -1,6 +1,6 @@
-import Navigation from "../Navigation/Navigation";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import Navigation from "../Navigation/Navigation";
 
 import "./About.css";
 
