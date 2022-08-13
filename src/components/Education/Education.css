@@ -77,7 +77,7 @@
 @media (max-width: 575px) {
   .education__items {
     overflow-x: scroll;
-    max-width: 450px;
+    max-width: 360px;
   }
 
   .education__items::-webkit-scrollbar {

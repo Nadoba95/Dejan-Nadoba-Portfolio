@@ -21,7 +21,6 @@ body {
   font-family: var(--montserrat);
   color: var(--primaryColor);
   overflow-x: hidden;
-  width: 100vw;
 }
 
 .App {
