@@ -182,7 +182,7 @@ function Contact() {
             <p className="error-message">Please write some message</p>
           )}
           {messageSuccessfullySent && (
-            <p className="error-message">
+            <p className="sent-message">
               You message is successfully sent, thank you!
             </p>
           )}

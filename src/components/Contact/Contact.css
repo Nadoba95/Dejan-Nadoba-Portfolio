@@ -1,5 +1,5 @@
 .contact {
-  padding: 7rem 2rem 0 2rem;
+  padding: 7rem 0.2rem 0 0.2rem;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -112,13 +112,18 @@
   transform: translateY(-3px);
 }
 
-.error-message {
+.error-message,
+.sent-message {
   color: var(--green);
   font-family: var(--roboto);
   text-align: end;
 }
 
 @media (max-width: 768px) {
+  .contact {
+    max-width: 90%;
+  }
+
   .contact > div:nth-child(2) {
     flex-direction: column;
     padding: 2rem 1rem;
@@ -151,5 +156,10 @@
 
   .social-links i {
     font-size: 2.4rem;
+  }
+
+  .error-message,
+  .sent-message {
+    font-size: 14px;
   }
 }

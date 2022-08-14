@@ -98,9 +98,4 @@
   .other-projects {
     grid-template-columns: repeat(1, auto);
   }
-
-  .other-project {
-    width: 300px;
-    margin: 0 auto;
-  }
 }

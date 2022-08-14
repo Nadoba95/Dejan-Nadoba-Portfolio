@@ -20,7 +20,7 @@ body {
   background-color: var(--backgroundColor);
   font-family: var(--montserrat);
   color: var(--primaryColor);
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 .App {
@@ -73,11 +73,15 @@ body::-webkit-scrollbar-thumb {
   }
 
   .title {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     justify-content: flex-start;
   }
 
   .title::after {
-    width: 8rem;
+    width: 7rem;
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
   }
 }

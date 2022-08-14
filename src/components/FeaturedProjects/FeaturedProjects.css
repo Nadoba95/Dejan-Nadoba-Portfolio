@@ -256,6 +256,11 @@
 }
 
 @media (max-width: 575px) {
+  .projects {
+    padding: 6rem 0.5rem 0 0.5rem;
+    max-width: 95%;
+  }
+
   .featured-projects {
     gap: 3rem;
   }
