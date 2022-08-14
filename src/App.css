@@ -20,7 +20,7 @@ body {
   background-color: var(--backgroundColor);
   font-family: var(--montserrat);
   color: var(--primaryColor);
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
 }
 
 .App {
