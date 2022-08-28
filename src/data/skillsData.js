@@ -5,6 +5,9 @@ import Sass from "../assets/images/sass.svg";
 import Bootstrap from "../assets/images/bootstrap.svg";
 import React from "../assets/images/react.svg";
 import Redux from "../assets/images/redux.svg";
+import Node from "../assets/images/nodejs.svg";
+import MongoDB from "../assets/images/mongoDB.png";
+import SQL from "../assets/images/sql.png";
 import Git from "../assets/images/git.svg";
 
 export const skillsData = [
@@ -35,6 +38,18 @@ export const skillsData = [
   {
     name: "Redux",
     image: <img src={Redux} alt="Redux" />,
+  },
+  {
+    name: "Node",
+    image: <img src={Node} alt="Node.js" />,
+  },
+  {
+    name: "MongoDB",
+    image: <img src={MongoDB} alt="MongoDB" />,
+  },
+  {
+    name: "SQL",
+    image: <img src={SQL} alt="SQL" />,
   },
   {
     name: "Git",

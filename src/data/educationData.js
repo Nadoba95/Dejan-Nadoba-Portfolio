@@ -13,11 +13,4 @@ export const educationData = [
     date: "2014 - 2020",
     place: "In Zrenjanin",
   },
-  {
-    id: 2,
-    name: "IT Academy",
-    department: "Microsoft Development",
-    date: "2020 - 2021",
-    place: "In Belgrade",
-  },
 ];
