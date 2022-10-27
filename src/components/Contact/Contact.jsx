@@ -10,8 +10,9 @@ const isNotEmpty = (value) => value.trim() !== "";
 
 function Contact() {
   const [messageSuccessfullySent, setMessageSuccessfullySent] = useState(false);
+  const transition = { type: "spring", duration: 1, delay: 0.5 };
 
-  const tablet = window.innerWidth <= 768;
+  const desktop = window.innerWidth >= 1200;
 
   const {
     value: enteredEmail,
@@ -44,8 +45,6 @@ function Contact() {
     reset: resetMessageInput,
     valueRef: messageRef,
   } = useInput(isNotEmpty);
-
-  const transition = { type: "spring", duration: 1, delay: 0.5 };
 
   function submitHandler(e) {
     e.preventDefault();
@@ -107,31 +106,6 @@ function Contact() {
         <div className="contact__info">
           <div>Email: dejannadobaa@gmail.com</div>
           <div>Mobile: +381614413166</div>
-          {!tablet && (
-            <motion.div
-              initial={{ x: 0, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={transition}
-              className="social-links-container"
-            >
-              <ul className="social-links">
-                {linksData.map((data, i) => {
-                  return (
-                    <li key={i}>
-                      <a
-                        href={data.link}
-                        title={data.name}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        {data.icon}
-                      </a>
-                    </li>
-                  );
-                })}
-              </ul>
-            </motion.div>
-          )}
         </div>
         <form onSubmit={submitHandler} action={email} method="post">
           <div className="form-control">
@@ -189,28 +163,51 @@ function Contact() {
           <button className="form-btn" type="submit">
             Send
           </button>
+          {desktop ? (
+            <motion.div
+              initial={{ x: 0, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={transition}
+              className="social-links-container"
+            >
+              <ul className="social-links">
+                {linksData.map((data, i) => {
+                  return (
+                    <li key={i}>
+                      <a
+                        href={data.link}
+                        title={data.name}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {data.icon}
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
+            </motion.div>
+          ) : (
+            <div className="social-links-container">
+              <ul className="social-links">
+                {linksData.map((data, i) => {
+                  return (
+                    <li key={i}>
+                      <a
+                        href={data.link}
+                        title={data.name}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {data.icon}
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+          )}
         </form>
-
-        {tablet && (
-          <div className="social-links-container">
-            <ul className="social-links">
-              {linksData.map((data, i) => {
-                return (
-                  <li key={i}>
-                    <a
-                      href={data.link}
-                      title={data.name}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {data.icon}
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        )}
       </div>
     </div>
   );

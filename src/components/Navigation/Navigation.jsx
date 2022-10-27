@@ -31,7 +31,7 @@ function Navigation({ aboutInView }) {
 
   const resumeLink = (
     <a
-      className="resume-link "
+      className="resume-link"
       href={CV}
       download="Dejan Nadoba CV"
       onClick={closeNavbar}
