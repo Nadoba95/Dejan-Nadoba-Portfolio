@@ -142,7 +142,8 @@
 
 @media (max-width: 768px) {
   .contact {
-    max-width: 90%;
+    width: clamp(200px, 100%, 1230px);
+    padding: 0 20px;
   }
 
   .contact > div:nth-child(2) {

@@ -2,6 +2,7 @@ import Todo from "../assets/images/Todo.png";
 import TipCalculator from "../assets/images/tip-calculator.png";
 import CountdownTimer from "../assets/images/countdown-timer.png";
 import Restaurant from "../assets/images/restaurant.png";
+import ShorteningLink from "../assets/images/shortening-link.png";
 import TimeDashboard from "../assets/images/time-tracking-dashboard.png";
 
 export const otherProjectsData = [
@@ -46,9 +47,19 @@ export const otherProjectsData = [
   },
 
   {
+    name: "Shortening Link API",
+    image: <img src={ShorteningLink} alt="ShorteningLink" />,
+    techs: ["HTML", "SCSS", "JavaScript", "REST", "BEM"],
+    description:
+      "Responsive Shortly URL shortening API page, user can insert some link and he will get short version of him.",
+    github: "https://github.com/Nadoba95/Shortly-URL-shortening-API",
+    liveSite: "https://nadoba95.github.io/Shortly-URL-shortening-API/",
+  },
+
+  {
     name: "Time Tracking Dashboard",
     image: <img src={TimeDashboard} alt="TimeDashboard" />,
-    techs: ["HTML", "CSS", "SCSS"],
+    techs: ["HTML", "SCSS"],
     description:
       "Dashboard where i'm getting data from json file and i used and practiced SCSS in this app for the first time ",
     github: "https://github.com/Nadoba95/Time-tracking-dashboard",
