@@ -6,18 +6,20 @@ import CV from "../../assets/pdf/Dejan Nadoba CV.pdf";
 import "./Navigation.css";
 
 function Navigation({ aboutInView }) {
-  const [navClasses, setNavClasses] = useState("navigation");
+  const [heroInView, setHeroInView] = useState(true);
   const [navIsOpen, setNavIsOpen] = useState(false);
 
   const transition = { type: "spring", duration: 1 };
   const tablet = window.innerWidth <= 768;
   const mobile = window.innerWidth <= 575;
 
+  const navClasses = `navigation ${!heroInView ? "fixed" : ""}`;
+
   useEffect(() => {
     if (aboutInView) {
-      setNavClasses("navigation");
+      setHeroInView(true);
     } else {
-      setNavClasses("navigation fixed");
+      setHeroInView(false);
     }
   }, [aboutInView]);
 
@@ -74,7 +76,7 @@ function Navigation({ aboutInView }) {
             </li>
             <li>
               <a href="#projects" onClick={closeNavbar}>
-                Project
+                Projects
               </a>
             </li>
             <li>

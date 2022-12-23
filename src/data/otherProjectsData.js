@@ -1,3 +1,4 @@
+import FitClub from "../assets/images/fit-club.jpg";
 import Todo from "../assets/images/Todo.png";
 import TipCalculator from "../assets/images/tip-calculator.png";
 import CountdownTimer from "../assets/images/countdown-timer.png";
@@ -6,6 +7,15 @@ import ShorteningLink from "../assets/images/shortening-link.png";
 import TimeDashboard from "../assets/images/time-tracking-dashboard.png";
 
 export const otherProjectsData = [
+  {
+    name: "Fit Club Website",
+    image: <img src={FitClub} alt="FitClub" />,
+    techs: ["React", "Framer-Motion"],
+    description:
+      "This is my first REST project and i learned a lot about react building it. Used react custom hooks, react router for pagination, useContext, etc.",
+    github: "https://github.com/Nadoba95/Fit-Club-Website",
+    liveSite: "https://fit-club-website-nadoba95.netlify.app/",
+  },
   {
     name: "Todo App",
     image: <img src={Todo} alt="Todo" />,

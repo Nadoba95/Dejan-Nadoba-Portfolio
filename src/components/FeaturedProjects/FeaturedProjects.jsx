@@ -152,7 +152,7 @@ function FeaturedProjects() {
           className="project"
         >
           <a
-            href="https://fit-club-website-nadoba95.netlify.app/"
+            href="https://tech-order-nadoba95.netlify.app/"
             target="_blank"
             rel="noreferrer"
           >
@@ -160,19 +160,17 @@ function FeaturedProjects() {
           </a>
           <span className="project-details3 details">
             <span>Featured Project</span>
-            <span className="project__name">Fit Club Website</span>
+            <span className="project__name">Techs Order</span>
             <div className="project__desc">
-              On this project i used first time framer motion for animations in
-              react. This project was for me practicing all round (react, css,
-              js, animations).
+              User can order some tech devices witch are added to cart, amount
+              of items can also be increased or decreased from cart.
             </div>
             <ul className="project__tech-list">
               <li>React</li>
-              <li>Framer-Motion</li>
             </ul>
             <div className="project__links">
               <a
-                href="https://github.com/Nadoba95/Fit-Club-Website"
+                href="https://github.com/Nadoba95/Tech-order"
                 target="_blank"
                 title="Github"
                 rel="noreferrer"
@@ -180,7 +178,7 @@ function FeaturedProjects() {
                 <i className="fa-brands fa-github"></i>
               </a>
               <a
-                href="https://fit-club-website-nadoba95.netlify.app/"
+                href="https://tech-order-nadoba95.netlify.app/"
                 target="_blank"
                 title="External link"
                 rel="noreferrer"

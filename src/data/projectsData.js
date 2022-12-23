@@ -14,7 +14,7 @@ export const projectsData = [
   },
 
   {
-    name: "REST Countries API",
+    name: "Tic Tac Toe App",
     image: <img src={TicTac} alt="TicTac" />,
     techs: ["HTML", "CSS", "JavaScript"],
     description:
@@ -24,7 +24,7 @@ export const projectsData = [
   },
 
   {
-    name: "REST Countries API",
+    name: "Fit Club Website",
     image: <img src={FitClub} alt="FitClub" />,
     techs: ["React", "Framer-Motion"],
     description:

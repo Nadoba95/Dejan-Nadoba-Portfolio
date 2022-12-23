@@ -35,6 +35,7 @@
 }
 
 .list > li > a {
+  position: relative;
   cursor: pointer;
   text-decoration: none;
   color: var(--secondaryColor);
@@ -42,7 +43,21 @@
 
 .list > li:hover > a {
   color: var(--green);
-  border-bottom: 1px solid var(--green);
+}
+
+.list > li > a::after {
+  content: "";
+  height: 1px;
+  width: 0;
+  background-color: var(--green);
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  transition: 0.2s;
+}
+
+.list > li:hover > a::after {
+  width: 100%;
 }
 
 .resume-link {

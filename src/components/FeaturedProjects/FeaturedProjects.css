@@ -97,7 +97,7 @@
       rgba(29, 72, 83, 0.8),
       rgba(29, 72, 83, 0.8)
     ),
-    url(../../assets/images/fit-club.jpg);
+    url(../../assets/images/techs-order.jpg);
 }
 
 .project-img3:hover {
@@ -105,7 +105,7 @@
       rgba(29, 72, 83, 0.2),
       rgba(29, 72, 83, 0.2)
     ),
-    url(../../assets/images/fit-club.jpg);
+    url(../../assets/images/techs-order.jpg);
 }
 
 .project-details1,
@@ -251,7 +251,7 @@
         rgba(29, 72, 83, 0.9),
         rgba(29, 72, 83, 0.9)
       ),
-      url(../../assets/images/fit-club.jpg);
+      url(../../assets/images/techs-order.jpg);
   }
 }
 
