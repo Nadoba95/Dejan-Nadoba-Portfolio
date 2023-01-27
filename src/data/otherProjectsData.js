@@ -1,4 +1,5 @@
 import FitClub from "../assets/images/fit-club.jpg";
+import FrontendRules from "../assets/images/fe-rules.jpg";
 import Todo from "../assets/images/Todo.png";
 import TipCalculator from "../assets/images/tip-calculator.png";
 import CountdownTimer from "../assets/images/countdown-timer.png";
@@ -7,6 +8,16 @@ import ShorteningLink from "../assets/images/shortening-link.png";
 import TimeDashboard from "../assets/images/time-tracking-dashboard.png";
 
 export const otherProjectsData = [
+  {
+    name: "Frontend-Rules Website",
+    image: <img src={FrontendRules} alt="Frontend Rules" />,
+    techs: ["HTML", "SCSS", "BEM", "Javascript"],
+    description:
+      "My first landing page (single-page) website on internship, exported from Figma.",
+    github: "https://github.com/Nadoba95/front-end-rules",
+    liveSite: "https://frontend-rules-dejan-nadoba.netlify.app/",
+  },
+
   {
     name: "Fit Club Website",
     image: <img src={FitClub} alt="FitClub" />,
@@ -47,7 +58,7 @@ export const otherProjectsData = [
   },
 
   {
-    name: "Restaurant Site",
+    name: "Restaurant Website",
     image: <img src={Restaurant} alt="Restaurant" />,
     techs: ["HTML", "CSS", "JavaScript"],
     description:

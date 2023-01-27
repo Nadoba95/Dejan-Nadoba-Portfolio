@@ -10,9 +10,11 @@ function FeaturedProjects() {
   const [project1Ref, project1View] = useInView({ threshold: 0.5 });
   const [project2Ref, project2View] = useInView({ threshold: 0.5 });
   const [project3Ref, project3View] = useInView({ threshold: 0.5 });
+  const [project4Ref, project4View] = useInView({ threshold: 0.5 });
   const project1Animation = useAnimation();
   const project2Animation = useAnimation();
   const project3Animation = useAnimation();
+  const project4Animation = useAnimation();
 
   const transition = { type: "spring", duration: 2.5, bounce: 0.5 };
   const mobile = window.innerWidth <= 575;
@@ -34,6 +36,12 @@ function FeaturedProjects() {
       animate(project3Animation);
     }
   }, [project3View, project3Animation]);
+
+  useEffect(() => {
+    if (project4View) {
+      animate(project4Animation);
+    }
+  }, [project4View, project4Animation]);
 
   function animate(animation) {
     animation.start({
@@ -160,9 +168,9 @@ function FeaturedProjects() {
           </a>
           <span className="project-details3 details">
             <span>Featured Project</span>
-            <span className="project__name">Techs Order</span>
+            <span className="project__name">Techs Order Store</span>
             <div className="project__desc">
-              User can order some tech devices witch are added to cart, amount
+              User can order some tech devices which are added to cart, amount
               of items can also be increased or decreased from cart.
             </div>
             <ul className="project__tech-list">
@@ -187,6 +195,52 @@ function FeaturedProjects() {
               </a>
             </div>
           </span>
+        </motion.div>
+
+        <motion.div
+          ref={project4Ref}
+          initial={mobile ? { x: 0, opacity: 0 } : { x: -200, opacity: 0 }}
+          animate={project4Animation}
+          className="project"
+        >
+          <span className="project-details2 details">
+            <span>Featured Project</span>
+            <span className="project__name">Workent Website</span>
+            <div className="project__desc">
+              Exported Figma design to code, full responsive multi-page website.
+            </div>
+            <ul className="project__tech-list">
+              <li>HTML</li>
+              <li>SCSS</li>
+              <li>BEM</li>
+              <li>JavaScript</li>
+            </ul>
+            <div className="project__links">
+              <a
+                href="https://github.com/Nadoba95/Workent"
+                target="_blank"
+                title="Github"
+                rel="noreferrer"
+              >
+                <i className="fa-brands fa-github"></i>
+              </a>
+              <a
+                href="https://workent-dejan-nadoba.netlify.app/"
+                target="_blank"
+                title="External link"
+                rel="noreferrer"
+              >
+                <i className="fa-solid fa-up-right-from-square"></i>
+              </a>
+            </div>
+          </span>
+          <a
+            href="https://nadoba95.github.io/Tic-tac-toe-game/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div className="project-img4 img"></div>
+          </a>
         </motion.div>
       </div>
 

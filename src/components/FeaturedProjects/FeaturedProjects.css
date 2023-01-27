@@ -44,11 +44,13 @@
   border-bottom: 1px solid transparent;
 }
 
-.project-img2 {
+.project-img2,
+.project-img4 {
   border-left: 1px solid var(--green);
 }
 
-.project-img2:hover {
+.project-img2:hover,
+.project-img4:hover {
   border-left: 1px solid transparent;
   border-bottom: 1px solid transparent;
 }
@@ -108,12 +110,29 @@
     url(../../assets/images/techs-order.jpg);
 }
 
+.project-img4 {
+  background-image: linear-gradient(
+      rgba(29, 72, 83, 0.8),
+      rgba(29, 72, 83, 0.8)
+    ),
+    url(../../assets/images/workent.jpg);
+}
+
+.project-img4:hover {
+  background-image: linear-gradient(
+      rgba(29, 72, 83, 0.2),
+      rgba(29, 72, 83, 0.2)
+    ),
+    url(../../assets/images/workent.jpg);
+}
+
 .project-details1,
 .project-details3 {
   align-items: flex-end;
 }
 
-.project-details2 {
+.project-details2,
+.project-details4 {
   align-items: flex-start;
 }
 
@@ -223,7 +242,9 @@
   }
 
   .project-img2,
-  .project-img2:hover {
+  .project-img4,
+  .project-img2:hover,
+  .project-img4:hover {
     border-left: none;
   }
 
@@ -252,6 +273,15 @@
         rgba(29, 72, 83, 0.9)
       ),
       url(../../assets/images/techs-order.jpg);
+  }
+
+  .project-img4,
+  .project-img4:hover {
+    background-image: linear-gradient(
+        rgba(29, 72, 83, 0.9),
+        rgba(29, 72, 83, 0.9)
+      ),
+      url(../../assets/images/workent.jpg);
   }
 }
 
