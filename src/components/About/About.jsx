@@ -18,9 +18,9 @@ function About() {
           <span>Dejan Nadoba</span>
           <span>I build things for the web.</span>
           <span>
-            I'am passionate <span>Front-End Developer</span>. I love to design
-            and develop responsive websites. Has a desire to become a good web
-            developer and i also enjoy learning new stuff every day.
+            I'm passionate <span>Front-End Developer</span>. I love to design
+            and develop responsive websites. I desire to become a good web
+            developer and also enjoy learning new stuff every day.
           </span>
         </div>
         <div className="about__right">
