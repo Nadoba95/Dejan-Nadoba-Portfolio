@@ -63,67 +63,39 @@
 }
 
 .project-img1 {
-  background-image: linear-gradient(
-      rgba(29, 72, 83, 0.8),
-      rgba(29, 72, 83, 0.8)
-    ),
+  background-image: linear-gradient(rgba(29, 72, 83, 0.8), rgba(29, 72, 83, 0.8)),
     url(../../assets/images/Countries.jpg);
 }
 
 .project-img1:hover {
-  background-image: linear-gradient(
-      rgba(29, 72, 83, 0.2),
-      rgba(29, 72, 83, 0.2)
-    ),
+  background-image: linear-gradient(rgba(29, 72, 83, 0.2), rgba(29, 72, 83, 0.2)),
     url(../../assets/images/Countries.jpg);
 }
 
 .project-img2 {
-  background-image: linear-gradient(
-      rgba(29, 72, 83, 0.8),
-      rgba(29, 72, 83, 0.8)
-    ),
-    url(../../assets/images/iks-oks.jpg);
+  background-image: linear-gradient(rgba(29, 72, 83, 0.8), rgba(29, 72, 83, 0.8)), url(../../assets/images/iks-oks.jpg);
 }
 
 .project-img2:hover {
-  background-image: linear-gradient(
-      rgba(29, 72, 83, 0.2),
-      rgba(29, 72, 83, 0.2)
-    ),
-    url(../../assets/images/iks-oks.jpg);
+  background-image: linear-gradient(rgba(29, 72, 83, 0.2), rgba(29, 72, 83, 0.2)), url(../../assets/images/iks-oks.jpg);
 }
 
 .project-img3 {
-  background-image: linear-gradient(
-      rgba(29, 72, 83, 0.8),
-      rgba(29, 72, 83, 0.8)
-    ),
+  background-image: linear-gradient(rgba(29, 72, 83, 0.8), rgba(29, 72, 83, 0.8)),
     url(../../assets/images/techs-order.jpg);
 }
 
 .project-img3:hover {
-  background-image: linear-gradient(
-      rgba(29, 72, 83, 0.2),
-      rgba(29, 72, 83, 0.2)
-    ),
+  background-image: linear-gradient(rgba(29, 72, 83, 0.2), rgba(29, 72, 83, 0.2)),
     url(../../assets/images/techs-order.jpg);
 }
 
 .project-img4 {
-  background-image: linear-gradient(
-      rgba(29, 72, 83, 0.8),
-      rgba(29, 72, 83, 0.8)
-    ),
-    url(../../assets/images/workent.jpg);
+  background-image: linear-gradient(rgba(29, 72, 83, 0.8), rgba(29, 72, 83, 0.8)), url(../../assets/images/workent.jpg);
 }
 
 .project-img4:hover {
-  background-image: linear-gradient(
-      rgba(29, 72, 83, 0.2),
-      rgba(29, 72, 83, 0.2)
-    ),
-    url(../../assets/images/workent.jpg);
+  background-image: linear-gradient(rgba(29, 72, 83, 0.2), rgba(29, 72, 83, 0.2)), url(../../assets/images/workent.jpg);
 }
 
 .project-details1,
@@ -250,37 +222,25 @@
 
   .project-img1,
   .project-img1:hover {
-    background-image: linear-gradient(
-        rgba(29, 72, 83, 0.9),
-        rgba(29, 72, 83, 0.9)
-      ),
+    background-image: linear-gradient(rgba(29, 72, 83, 0.9), rgba(29, 72, 83, 0.9)),
       url(../../assets/images/Countries.jpg);
   }
 
   .project-img2,
   .project-img2:hover {
-    background-image: linear-gradient(
-        rgba(29, 72, 83, 0.9),
-        rgba(29, 72, 83, 0.9)
-      ),
+    background-image: linear-gradient(rgba(29, 72, 83, 0.9), rgba(29, 72, 83, 0.9)),
       url(../../assets/images/iks-oks.jpg);
   }
 
   .project-img3,
   .project-img3:hover {
-    background-image: linear-gradient(
-        rgba(29, 72, 83, 0.9),
-        rgba(29, 72, 83, 0.9)
-      ),
+    background-image: linear-gradient(rgba(29, 72, 83, 0.9), rgba(29, 72, 83, 0.9)),
       url(../../assets/images/techs-order.jpg);
   }
 
   .project-img4,
   .project-img4:hover {
-    background-image: linear-gradient(
-        rgba(29, 72, 83, 0.9),
-        rgba(29, 72, 83, 0.9)
-      ),
+    background-image: linear-gradient(rgba(29, 72, 83, 0.9), rgba(29, 72, 83, 0.9)),
       url(../../assets/images/workent.jpg);
   }
 }

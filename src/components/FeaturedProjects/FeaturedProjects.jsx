@@ -66,20 +66,15 @@ function FeaturedProjects() {
           animate={project1Animation}
           className="project"
         >
-          <a
-            href="https://rest-countries-api-nadoba95.netlify.app"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="https://rest-countries-api-nadoba95.netlify.app" target="_blank" rel="noreferrer">
             <div className="project-img1 img"></div>
           </a>
           <span className="project-details1 details">
             <span>Featured Project</span>
             <span className="project__name">REST Countries API</span>
             <div className="project__desc">
-              This is my first REST project and i learned a lot about react
-              building it. Used react custom hooks, react router for pagination,
-              useContext, etc.
+              This is my first REST project and i learned a lot about react building it. Used react custom hooks, react
+              router for pagination, useContext, etc.
             </div>
             <ul className="project__tech-list">
               <li>React</li>
@@ -87,12 +82,7 @@ function FeaturedProjects() {
               <li>API</li>
             </ul>
             <div className="project__links">
-              <a
-                href="https://github.com/Nadoba95/REST-Countries-API"
-                target="_blank"
-                title="Github"
-                rel="noreferrer"
-              >
+              <a href="https://github.com/Nadoba95/REST-Countries-API" target="_blank" title="Github" rel="noreferrer">
                 <i className="fa-brands fa-github"></i>
               </a>
               <a
@@ -117,8 +107,8 @@ function FeaturedProjects() {
             <span>Featured Project</span>
             <span className="project__name">Tic Tac Toe App</span>
             <div className="project__desc">
-              Built a tic tac toe game where people can play against each other
-              or against CPU. Used html, css and JavaScript.
+              Built a tic tac toe game where people can play against each other or against CPU. Used html, css and
+              JavaScript.
             </div>
             <ul className="project__tech-list">
               <li>HTML</li>
@@ -126,12 +116,7 @@ function FeaturedProjects() {
               <li>JavaScript</li>
             </ul>
             <div className="project__links">
-              <a
-                href="https://github.com/Nadoba95/Tic-tac-toe-game"
-                target="_blank"
-                title="Github"
-                rel="noreferrer"
-              >
+              <a href="https://github.com/Nadoba95/Tic-tac-toe-game" target="_blank" title="Github" rel="noreferrer">
                 <i className="fa-brands fa-github"></i>
               </a>
               <a
@@ -144,11 +129,7 @@ function FeaturedProjects() {
               </a>
             </div>
           </span>
-          <a
-            href="https://nadoba95.github.io/Tic-tac-toe-game/"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="https://nadoba95.github.io/Tic-tac-toe-game/" target="_blank" rel="noreferrer">
             <div className="project-img2 img"></div>
           </a>
         </motion.div>
@@ -159,38 +140,24 @@ function FeaturedProjects() {
           animate={project3Animation}
           className="project"
         >
-          <a
-            href="https://tech-order-nadoba95.netlify.app/"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="https://tech-order-nadoba95.netlify.app/" target="_blank" rel="noreferrer">
             <div className="project-img3 img"></div>
           </a>
           <span className="project-details3 details">
             <span>Featured Project</span>
             <span className="project__name">Techs Order Store</span>
             <div className="project__desc">
-              User can order some tech devices which are added to cart, amount
-              of items can also be increased or decreased from cart.
+              User can order some tech devices which are added to cart, amount of items can also be increased or
+              decreased from cart.
             </div>
             <ul className="project__tech-list">
               <li>React</li>
             </ul>
             <div className="project__links">
-              <a
-                href="https://github.com/Nadoba95/Tech-order"
-                target="_blank"
-                title="Github"
-                rel="noreferrer"
-              >
+              <a href="https://github.com/Nadoba95/Tech-order" target="_blank" title="Github" rel="noreferrer">
                 <i className="fa-brands fa-github"></i>
               </a>
-              <a
-                href="https://tech-order-nadoba95.netlify.app/"
-                target="_blank"
-                title="External link"
-                rel="noreferrer"
-              >
+              <a href="https://tech-order-nadoba95.netlify.app/" target="_blank" title="External link" rel="noreferrer">
                 <i className="fa-solid fa-up-right-from-square"></i>
               </a>
             </div>
@@ -206,9 +173,7 @@ function FeaturedProjects() {
           <span className="project-details2 details">
             <span>Featured Project</span>
             <span className="project__name">Workent Website</span>
-            <div className="project__desc">
-              Exported Figma design to code, full responsive multi-page website.
-            </div>
+            <div className="project__desc">Exported Figma design to code, full responsive multi-page website.</div>
             <ul className="project__tech-list">
               <li>HTML</li>
               <li>SCSS</li>
@@ -216,12 +181,7 @@ function FeaturedProjects() {
               <li>JavaScript</li>
             </ul>
             <div className="project__links">
-              <a
-                href="https://github.com/Nadoba95/Workent"
-                target="_blank"
-                title="Github"
-                rel="noreferrer"
-              >
+              <a href="https://github.com/Nadoba95/Workent" target="_blank" title="Github" rel="noreferrer">
                 <i className="fa-brands fa-github"></i>
               </a>
               <a
@@ -234,11 +194,7 @@ function FeaturedProjects() {
               </a>
             </div>
           </span>
-          <a
-            href="https://nadoba95.github.io/Tic-tac-toe-game/"
-            target="_blank"
-            rel="noreferrer"
-          >
+          <a href="https://workent-dejan-nadoba.netlify.app/" target="_blank" rel="noreferrer">
             <div className="project-img4 img"></div>
           </a>
         </motion.div>
@@ -249,9 +205,7 @@ function FeaturedProjects() {
           Show More
         </div>
       )}
-      {showMore && (
-        <OtherProjects showMore={showMore} setShowMore={setShowMore} />
-      )}
+      {showMore && <OtherProjects showMore={showMore} setShowMore={setShowMore} />}
     </div>
   );
 }
