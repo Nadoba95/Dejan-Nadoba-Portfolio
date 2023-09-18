@@ -32,12 +32,7 @@ function Navigation({ aboutInView }) {
   }
 
   const resumeLink = (
-    <a
-      className="resume-link"
-      href={CV}
-      download="Dejan Nadoba CV"
-      onClick={closeNavbar}
-    >
+    <a className="resume-link" href={CV} download="Dejan Nadoba CV" onClick={closeNavbar}>
       Resume
     </a>
   );
@@ -49,15 +44,21 @@ function Navigation({ aboutInView }) {
       transition={transition}
       className={navClasses}
     >
-      <span>
+      <button className="btn-logo" type="button">
         <a href=".">DN</a>
-      </span>
+      </button>
       {mobile && resumeLink}
       {tablet && !navIsOpen ? (
-        <i className="fa-solid fa-bars" onClick={openNavbar}></i>
+        <button className="btn-menu" type="buton" onClick={openNavbar}>
+          <i className="fa-solid fa-bars"></i>
+        </button>
       ) : (
         <>
-          {tablet && <i className="fa-solid fa-bars" onClick={closeNavbar}></i>}
+          {tablet && (
+            <button className="btn-menu" type="buton" onClick={closeNavbar}>
+              <i className="fa-solid fa-bars"></i>
+            </button>
+          )}
           <ul className="list">
             <li>
               <a href="#about" onClick={closeNavbar}>
@@ -84,7 +85,7 @@ function Navigation({ aboutInView }) {
                 Contact
               </a>
             </li>
-            {!mobile && resumeLink}
+            {!mobile && <li>{resumeLink}</li>}
           </ul>
         </>
       )}

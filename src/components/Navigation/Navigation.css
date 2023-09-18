@@ -16,12 +16,21 @@
   padding: 0.5rem 2rem;
 }
 
-.navigation > span > a {
+.navigation > .btn-logo,
+.btn-menu {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+.navigation > .btn-logo > a {
   font-size: 2rem;
   font-weight: 600;
   color: var(--green);
   cursor: pointer;
   text-decoration: none;
+  font-family: var(--montserrat);
 }
 
 .list {
@@ -45,6 +54,10 @@
   color: var(--green);
 }
 
+.list > li:last-child > a {
+  color: var(--secondaryColor);
+}
+
 .list > li > a::after {
   content: "";
   height: 1px;
@@ -58,6 +71,10 @@
 
 .list > li:hover > a::after {
   width: 100%;
+}
+
+.list > li:last-child:hover > a:after {
+  width: 0;
 }
 
 .resume-link {
@@ -76,12 +93,13 @@
   background-color: #12294b;
 }
 
-@media (max-width: 768px) {
-  nav > i {
-    font-size: 22px;
-    cursor: pointer;
-  }
+nav > .btn-menu > i {
+  font-size: 22px;
+  cursor: pointer;
+  color: var(--primaryColor);
+}
 
+@media (max-width: 768px) {
   .list {
     position: absolute;
     right: 2rem;

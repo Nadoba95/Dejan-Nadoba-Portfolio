@@ -6,6 +6,7 @@ import Bootstrap from "../assets/images/bootstrap.svg";
 import React from "../assets/images/react.svg";
 import Redux from "../assets/images/redux.svg";
 import Git from "../assets/images/git.svg";
+import TypeScript from "../assets/images/typescript.png";
 
 export const skillsData = [
   {
@@ -19,6 +20,10 @@ export const skillsData = [
   {
     name: "JavaScript",
     image: <img src={JavaScript} alt="JavaScript" />,
+  },
+  {
+    name: "TypeScript",
+    image: <img src={TypeScript} alt="Typescript" />,
   },
   {
     name: "SASS",
